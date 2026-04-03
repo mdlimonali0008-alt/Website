@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIMON AHMED - Profile</title>
+    <title>LIMON AHMED - RGB Profile</title>
     <style>
         body {
             display: flex;
-            flex-direction: column; /* লেখা এবং ছবি নিচে নিচে রাখার জন্য */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #ffffff;
-            font-family: 'Arial', sans-serif;
+            background-color: #000; /* কালারগুলো ভালো ফুটানোর জন্য ব্যাকগ্রাউন্ড কালো দেওয়া হয়েছে */
+            font-family: 'Arial Black', sans-serif;
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
+        .rgb-text {
+            font-size: 60px; /* লেখাটি বড় করা হয়েছে */
+            font-weight: bold;
             text-transform: uppercase;
+            background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 400% 400%;
+            animation: rainbow-animation 5s ease infinite;
+            margin-bottom: 30px;
+        }
+
+        /* রঙ পরিবর্তনের এনিমেশন */
+        @keyframes rainbow-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
@@ -28,19 +41,20 @@
         }
 
         img {
-            max-width: 80%;
+            max-width: 85%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border: 4px solid #333;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>LIMON AHMED</h1>
+        <h1 class="rgb-text">LIMON AHMED</h1>
 
-        <img src="IMG_20260116_172125.png" alt="LIMON AHMED's Image">
+        <img src="IMG_20260116_172125.png" alt="LIMON AHMED">
     </div>
 
 </body>
