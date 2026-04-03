@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Limon Ali - Freelancer</title>
+    <title>Md Limon Ali - Portfolio</title>
     <style>
         body {
             display: flex;
@@ -18,9 +18,9 @@
             text-align: center;
         }
 
-        /* --- MD LIMON ALI - আরও বড় --- */
+        /* MD LIMON ALI - বড় ও স্টাইলিশ */
         .rgb-text-main {
-            font-size: clamp(50px, 12vw, 120px); /* আগের চেয়ে বড় করা হয়েছে */
+            font-size: clamp(50px, 12vw, 120px);
             font-weight: 900;
             text-transform: uppercase;
             background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
@@ -29,46 +29,61 @@
             color: transparent;
             background-size: 400% 400%;
             animation: rainbow-animation 5s ease infinite;
-            margin-bottom: 5px;
-            line-height: 1; /* বড় টেক্সটের জন্য লাইন হাইট কমানো */
+            margin-bottom: 10px;
+            line-height: 1;
         }
 
-        /* --- I am a Freelancer - বড় এবং দ্রুত রঙ পরিবর্তন --- */
-        .subtitle-rgb {
-            font-size: clamp(24px, 5vw, 40px); /* লেখাটি বড় করা হয়েছে */
+        /* I am a Freelancer - টাইপিং অ্যানিমেশন ও বড় সাইজ */
+        .typing-container {
+            font-size: clamp(24px, 5vw, 40px);
             font-weight: 700;
+            color: #00ffcc;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 25px;
-            
-            /* দ্রুত রঙ পরিবর্তনের জন্য ব্যাকগ্রাউন্ড */
-            background: linear-gradient(to right, #00ffff, #ff00ff, #ffff00, #00ffff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-size: 300% 100%;
-            /* অ্যানিমেশন সময় কমিয়ে ২ সেকেন্ড (2s) করা হয়েছে খুব দ্রুত পরিবর্তনের জন্য */
-            animation: fast-rainbow 2s linear infinite;
+            border-right: 3px solid #00ffcc; /* কার্সার এফেক্ট */
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0; /* শুরুতে লুকানো থাকবে */
+            animation: typing 3s steps(20, end) forwards, blink 0.6s step-end infinite;
         }
 
-        /* ফেসবুক বাটন */
-        .fb-link {
+        /* বাটন এরিয়া */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        /* সাধারণ বাটন স্টাইল */
+        .btn {
             text-decoration: none;
-            background-color: #1877F2;
             color: white;
             padding: 12px 30px;
             font-size: 18px;
             border-radius: 50px;
             font-weight: bold;
-            display: inline-block;
-            margin: 20px 0;
             transition: 0.3s;
+            display: inline-block;
+        }
+
+        /* ফেসবুক বাটন */
+        .fb-link {
+            background-color: #1877F2;
             box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
         }
 
-        .fb-link:hover {
-            transform: scale(1.05);
-            background-color: #145dbf;
+        /* ইমেইল বাটন - লাল রঙের (Gmail থিম) */
+        .email-link {
+            background-color: #D44638;
+            box-shadow: 0 4px 15px rgba(212, 70, 56, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.2);
         }
 
         /* ইমেজ স্টাইল */
@@ -104,25 +119,21 @@
             padding-bottom: 5px;
         }
 
-        .about-text {
-            font-size: 17px;
-            color: #ccc;
-            text-align: justify;
-        }
-
-        /* --- অ্যানিমেশন কিফ্রেম --- */
-        
-        /* মেইন নামের ধীর অ্যানিমেশন (আগের মতো) */
+        /* Animations */
         @keyframes rainbow-animation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* সাবটাইটেলের দ্রুত অ্যানিমেশন */
-        @keyframes fast-rainbow {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 0%; }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #00ffcc }
         }
     </style>
 </head>
@@ -130,18 +141,24 @@
 
     <h1 class="rgb-text-main">MD LIMON ALI</h1>
     
-    <div class="subtitle-rgb">I am a Freelancer</div>
+    <div class="typing-container">I am a Freelancer</div>
 
-    <a href="https://www.facebook.com/yllimon1" target="_blank" class="fb-link">
-        Facebook
-    </a>
+    <div class="button-group">
+        <a href="https://www.facebook.com/yllimon1" target="_blank" class="btn fb-link">
+            Facebook
+        </a>
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Mdlimonali62@gmail.com" target="_blank" class="btn email-link">
+            E-mail
+        </a>
+    </div>
 
     <img src="IMG_20260116_172125.png" alt="Md Limon Ali" class="profile-img">
 
     <div class="about-section">
         <div class="about-title">ABOUT</div>
-        <p class="about-text">
-            Md Limon Ali is a Bangladeshi entrepreneur and founder of Subgire. He started his company in 2022 and has been known as an entrepreneur ever since. His real name is Md Limon Ali, Md Limon Ali is a Bangladeshi entrepreneur and recording artist. Md Limon Ali founded a company called Subgire in 2022. He is mostly known as an entrepreneur rather than a recording artist. He was born in 2004 in Dhanbari, Dhaka.
+        <p style="color: #ccc; text-align: justify; font-size: 17px;">
+            Md Limon Ali is a Bangladeshi entrepreneur and founder of Subgire. He started his company in 2022 and has been known as an entrepreneur ever since. His real name is Md Limon Ali. He was born in 2004 in Dhanbari, Dhaka.
         </p>
     </div>
 
