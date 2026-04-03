@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Limon Ali - Portfolio</title>
+    <title>Md Limon Ali Freelancer</title>
     <style>
         body {
             display: flex;
@@ -20,7 +20,7 @@
 
         /* RGB নাম */
         .rgb-text {
-            font-size: clamp(40px, 8vw, 80px); /* মোবাইল ও পিসিতে অটো অ্যাডজাস্ট হবে */
+            font-size: clamp(40px, 8vw, 80px);
             font-weight: 900;
             text-transform: uppercase;
             background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
@@ -29,7 +29,22 @@
             color: transparent;
             background-size: 400% 400%;
             animation: rainbow-animation 5s ease infinite;
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* নিচের লেখার সাথে দূরত্ব কমানো হয়েছে */
+        }
+
+        /* Freelancer টেক্সট স্টাইল */
+        .subtitle {
+            font-size: 22px;
+            color: #00ffcc; /* সায়ান কালার যা ব্ল্যাক ব্যাকগ্রাউন্ডে ভালো ফুটে ওঠে */
+            font-weight: 500;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-right: 2px solid #00ffcc; /* টাইপিং কার্সার এফেক্ট */
+            white-space: nowrap;
+            overflow: hidden;
+            width: fit-content;
+            animation: typing 3s steps(20, end), blink 0.5s step-end infinite;
         }
 
         /* ফেসবুক বাটন */
@@ -76,7 +91,7 @@
 
         .about-title {
             font-size: 28px;
-            color: #00ff00; /* হালকা সবুজ রঙ যাতে আলাদা বোঝায় */
+            color: #00ff00;
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -91,16 +106,29 @@
             text-align: justify;
         }
 
+        /* Animations */
         @keyframes rainbow-animation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #00ffcc }
+        }
     </style>
 </head>
 <body>
 
-    <h1 class="rgb-text">MD LIMON ALI</h1>
+    <h1 class="rgb-text">LIMON AHMED</h1>
+    
+    <div class="subtitle">I am a Freelancer</div>
 
     <a href="https://www.facebook.com/yllimon1" target="_blank" class="fb-link">
         Facebook
