@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Limon Ali Freelancer</title>
+    <title>Md Limon Ali - Freelancer</title>
     <style>
         body {
             display: flex;
@@ -18,9 +18,9 @@
             text-align: center;
         }
 
-        /* RGB নাম */
-        .rgb-text {
-            font-size: clamp(40px, 8vw, 80px);
+        /* --- MD LIMON ALI - আরও বড় --- */
+        .rgb-text-main {
+            font-size: clamp(50px, 12vw, 120px); /* আগের চেয়ে বড় করা হয়েছে */
             font-weight: 900;
             text-transform: uppercase;
             background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
@@ -29,22 +29,26 @@
             color: transparent;
             background-size: 400% 400%;
             animation: rainbow-animation 5s ease infinite;
-            margin-bottom: 5px; /* নিচের লেখার সাথে দূরত্ব কমানো হয়েছে */
+            margin-bottom: 5px;
+            line-height: 1; /* বড় টেক্সটের জন্য লাইন হাইট কমানো */
         }
 
-        /* Freelancer টেক্সট স্টাইল */
-        .subtitle {
-            font-size: 22px;
-            color: #00ffcc; /* সায়ান কালার যা ব্ল্যাক ব্যাকগ্রাউন্ডে ভালো ফুটে ওঠে */
-            font-weight: 500;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
+        /* --- I am a Freelancer - বড় এবং দ্রুত রঙ পরিবর্তন --- */
+        .subtitle-rgb {
+            font-size: clamp(24px, 5vw, 40px); /* লেখাটি বড় করা হয়েছে */
+            font-weight: 700;
             text-transform: uppercase;
-            border-right: 2px solid #00ffcc; /* টাইপিং কার্সার এফেক্ট */
-            white-space: nowrap;
-            overflow: hidden;
-            width: fit-content;
-            animation: typing 3s steps(20, end), blink 0.5s step-end infinite;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            
+            /* দ্রুত রঙ পরিবর্তনের জন্য ব্যাকগ্রাউন্ড */
+            background: linear-gradient(to right, #00ffff, #ff00ff, #ffff00, #00ffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 100%;
+            /* অ্যানিমেশন সময় কমিয়ে ২ সেকেন্ড (2s) করা হয়েছে খুব দ্রুত পরিবর্তনের জন্য */
+            animation: fast-rainbow 2s linear infinite;
         }
 
         /* ফেসবুক বাটন */
@@ -106,29 +110,27 @@
             text-align: justify;
         }
 
-        /* Animations */
+        /* --- অ্যানিমেশন কিফ্রেম --- */
+        
+        /* মেইন নামের ধীর অ্যানিমেশন (আগের মতো) */
         @keyframes rainbow-animation {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink {
-            from, to { border-color: transparent }
-            50% { border-color: #00ffcc }
+        /* সাবটাইটেলের দ্রুত অ্যানিমেশন */
+        @keyframes fast-rainbow {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 0%; }
         }
     </style>
 </head>
 <body>
 
-    <h1 class="rgb-text">LIMON AHMED</h1>
+    <h1 class="rgb-text-main">MD LIMON ALI</h1>
     
-    <div class="subtitle">I am a Freelancer</div>
+    <div class="subtitle-rgb">I am a Freelancer</div>
 
     <a href="https://www.facebook.com/yllimon1" target="_blank" class="fb-link">
         Facebook
